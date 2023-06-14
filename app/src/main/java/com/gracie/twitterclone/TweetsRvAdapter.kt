@@ -16,13 +16,16 @@ class TweetsRvAdapter (var tweetslist:List<TweetData>):RecyclerView.Adapter<Twee
     }
 
     override fun onBindViewHolder(holder: TweetsViewHolder, position: Int) {
-      var tweet=tweetslist.get(position)
+      val tweet=tweetslist.get(position)
         holder.binding.tvTweet.text=tweet.tweet
         holder.binding.tvHandle.text=tweet.handle
         holder.binding.tvDisplayName.text=tweet.displayName
-        holder.binding.tvLikeCount.tag=tweet.likeCount
-        holder.binding.tvReplyCount.tag=tweet.replyCount
-        holder.binding.tvRtCount.tag=tweet.rtCount
+//        holder.binding.ivRt.text=tweet.rt
+//        holder.binding.tvReply.text=tweet.reply
+//        holder.binding.tvLike.text=tweet.like
+        holder.binding.tvLikeCount.text=tweet.likeCount.toString()
+        holder.binding.tvReplyCount.text=tweet.replyCount.toString()
+        holder.binding.tvRtCount.text=tweet.rtCount.toString()
 
 
     }

@@ -21,15 +21,15 @@ class MainActivity : AppCompatActivity() {
     }
 
     fun displayTweets() {
-        var tweet1 = TweetData("", "@_Chica", "Grace", "This is amazing for sure", 5, 3, 267)
-        var tweet2 = TweetData("", "@_Chica", "Grace", "This is amazing for sure", 5, 3, 267)
-        var tweet3 = TweetData("", "@_Chica", "Grace", "This is amazing for sure", 5, 3, 267)
-        var tweet4 = TweetData("", "@_Chica", "Grace", "This is amazing for sure", 5, 3, 267)
+        val tweet1 = TweetData("", "@_Chica", "Grace", "This is amazing for sure", " ", "", "",90,23,78)
+        val tweet2 = TweetData("", "@_vicky", "Victor", "I Love coding", " ", " ", " ",90,56,100)
+        val tweet3 = TweetData("", "@_hes_bon", "Hesbon", "I do love kotlin", " ", " ", " ",90,67,45)
+        val tweet4 = TweetData("", "@_jojo", "Joel", "This is a great career trajectory", "", "", "",90,34,67)
 
 
-        var tweetList = listOf<TweetData>(tweet1, tweet2, tweet3, tweet4)
+        val tweetList = listOf<TweetData>(tweet1, tweet2, tweet3, tweet4)
         binding.rvTweets.layoutManager= LinearLayoutManager(this)
-        var tweetsAdapter =TweetsRvAdapter(tweetList)
+        val tweetsAdapter =TweetsRvAdapter(tweetList)
         binding.rvTweets.adapter=tweetsAdapter
 
 
